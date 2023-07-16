@@ -19,6 +19,10 @@ public class EventFunctionTest : MonoBehaviour
     private void OnEnable() {
            Debug.Log("컴포넌트가 비활성화 되었다가 활성화 될때 1회 호출 onEnbale()");
     }
+
+    private void OnDisable() {
+           Debug.Log("컴포넌트가 활성화 되었다가 비활성화 될때 1회 호출 OnDisable()");
+    }
     
     private void Update() {
          Debug.Log("매 프레임마다 계혹 호출 upDate()");
@@ -29,4 +33,15 @@ public class EventFunctionTest : MonoBehaviour
          Debug.Log("현재 씬에 존재하는 모든 게임 오브젝트의 UPDATE() 함수가 1회 실행된후 실행 LateUpdate()");
     }
 
+     private void FixedUpdate() {
+         Debug.Log("프레임 영향 받지 않음 ixedUpdate()");
+     }
+
+      private void OnDestory() {
+         Debug.Log("게임 오브젝트 파괴될때 1회 호출 , 씬이 변경되거나 게임이 종료 될때 OnDestory()");
+     }
+
+      private void OnApplicationQuit() {
+         Debug.Log("플레이 종료 OnApplicationQuit()");
+      }
 }
