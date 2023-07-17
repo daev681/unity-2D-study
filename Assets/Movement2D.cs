@@ -10,6 +10,7 @@ public class Movement2D : MonoBehaviour
 
 
     private void Update() {
+       // !
        // Negative left , a : -1
        // Positive right , d : 1
        // Non : 0
